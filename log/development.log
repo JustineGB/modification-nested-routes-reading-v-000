@@ -4053,3 +4053,36 @@ Processing by AuthorsController#show as HTML
   [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 4]]
   Rendered authors/show.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/4" for 174.16.137.187 at 2019-01-22 18:28:30 +0000
+Cannot render console from 174.16.137.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors/4/posts/new" for 174.16.137.187 at 2019-01-22 18:28:40 +0000
+Cannot render console from 174.16.137.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendered posts/_form.html.erb (0.9ms)
+  Rendered posts/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 174.16.137.187 at 2019-01-22 18:29:04 +0000
+Cannot render console from 174.16.137.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"57or4lGezVwQItWhegnpQgPmljLlQR3RuGummGiuejNfxNvykWEg3xrKEM7aNOFBM4Ap5KfDXkgHYLdRpWQJ6w==", "post"=>{"title"=>"The Scariest Story You Ever Heard", "description"=>"This is a post about writing absolutely terrifying tales. "}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "The Scariest Story You Ever Heard"], ["description", "This is a post about writing absolutely terrifying tales. "], ["created_at", "2019-01-22 18:29:04.301523"], ["updated_at", "2019-01-22 18:29:04.301523"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.60.187:53293/posts/18
+Completed 302 Found in 97ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/posts/18" for 174.16.137.187 at 2019-01-22 18:29:04 +0000
