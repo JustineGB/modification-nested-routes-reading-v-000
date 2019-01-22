@@ -4131,3 +4131,12 @@ Processing by PostsController#show as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 19]]
   Rendered posts/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/4/posts/new" for 174.16.137.187 at 2019-01-22 18:37:00 +0000
+Cannot render console from 174.16.137.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendered posts/_form.html.erb (2.0ms)
+  Rendered posts/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 27ms (Views: 18.6ms | ActiveRecord: 0.8ms)
