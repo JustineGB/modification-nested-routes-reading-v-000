@@ -3948,3 +3948,39 @@ Processing by PostsController#index as HTML
   [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 6]]
   Rendered posts/index.html.erb within layouts/application (3.4ms)
 Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 174.16.137.187 at 2019-01-22 18:25:08 +0000
+Cannot render console from 174.16.137.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered posts/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/new" for 174.16.137.187 at 2019-01-22 18:25:13 +0000
+Cannot render console from 174.16.137.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (21.3ms)
+  Rendered posts/new.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 174.16.137.187 at 2019-01-22 18:25:36 +0000
+Cannot render console from 174.16.137.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RkyFo7rxC3WVYgtu4RQL+1zvmYsY6qH6WbXMpWAfnXz+MnWzeg7m9p+KzgFBKQP4bIkmXVpo4mPmvt1srdXupA==", "post"=>{"title"=>"Sunny & High of 32 degrees", "description"=>"This is a post about the weather today "}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Sunny & High Of 32 Degrees"], ["description", "This is a post about the weather today "], ["created_at", "2019-01-22 18:25:36.515641"], ["updated_at", "2019-01-22 18:25:36.515641"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.60.187:53293/posts/17
+Completed 302 Found in 76ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/17" for 174.16.137.187 at 2019-01-22 18:25:36 +0000
+Cannot render console from 174.16.137.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
