@@ -1,8 +1,8 @@
 <h1><%= @author.name %></h1>
 
-<ul>Author's Posts:
-<% @author.posts.each do |post| %>
+<p>Author's Posts:
+<ul><% @author.posts.each do |post| %>
   <li><div><%= post.title %></div></li>
-<% end %></ul>
+<% end %></ul></p>
 
 <p>Add a New Post: <%= link_to "New Post", new_author_post_path(@author) %></p>
