@@ -4086,3 +4086,9 @@ Completed 302 Found in 97ms (ActiveRecord: 2.3ms)
 
 
 Started GET "/posts/18" for 174.16.137.187 at 2019-01-22 18:29:04 +0000
+Cannot render console from 174.16.137.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 18]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.1ms)
