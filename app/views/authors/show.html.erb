@@ -1,8 +1,9 @@
 <h1><%= @author.name %></h1>
 
-<p>Posts:</p>
+<p>Author's Posts:</p>
 <% @author.posts.each do |post| %>
   <div><%= post.title %></div>
 <% end %>
 
+<p>Add a New Post:</p>
 <%= link_to "New Post", new_author_post_path(@author) %>
